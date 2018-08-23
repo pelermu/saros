@@ -135,14 +135,14 @@ public:
         nDelayGetHeadersTime = 24 * 60 * 60;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1515677258, 976169, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1535054014, 478758, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000ffdd7c4bd151a05b2b669a4981ac80a00b71cabb402b4f61ad5aed873d5"));
-        assert(genesis.hashMerkleRoot == uint256S("0x4d0ccc69c94736988fcbbedb45d7b8db037acf0e9fa5796d3199f595979e0e6e"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000006c14155c0b78eb2070a8bbbe40d0cd5d141091037d3732a7f95ad3022d0"));
+        assert(genesis.hashMerkleRoot == uint256S("0xb1140c4cb4934bf9ca0c73ab8eb6690de39cf64e2fa40ca09bbc59e482c85cd5"));
 
         //vFixedSeeds.clear();
         //vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("saros.network", "dnsseed.saros.network"));
+        vSeeds.push_back(CDNSSeedData("45.32.126.58", "45.32.126.58"));
 
 
         // Saros addresses start with 'S'
@@ -243,7 +243,7 @@ public:
         pchMessageStart[1] = 0x76;
         pchMessageStart[2] = 0x73;
         pchMessageStart[3] = 0x70;
-        vAlertPubKey = ParseHex("044818a8163fd2d10960fb1cbfdcd4a7c2eb12142c2d38a9ecc24d76e8218796ca99ba3d2272f8fd3a857749f3288437a8b3ac1a994bb54ee6a700e0e039244137");
+        vAlertPubKey = ParseHex("0486bce1bac0d543f104cbff2bd23680056a3b9ea05e1137d2ff90eeb5e08472eb500322593a2cb06fbf8297d7beb6cd30cb90f98153b5b7cce1493749e41e0284");
         nDefaultPort = 19992;
         nMaxTipAge = 0x7fffffff; // allow mining on top of old blocks for testnet
         nDelayGetHeadersTime = 24 * 60 * 60;
@@ -288,7 +288,7 @@ public:
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
             (    0, uint256S("0x00000940c0a2e41a0086171ed045a2013f0782f42987b076e915d7c2643d5a5c")),
-            1515677259, // * UNIX timestamp of last checkpoint block
+            1535054014, // * UNIX timestamp of last checkpoint block
             0,       // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
             500         // * estimated number of transactions per day after checkpoint
